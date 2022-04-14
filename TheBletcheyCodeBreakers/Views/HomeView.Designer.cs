@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.welcomeLabel = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // welcomeLabel
+            // lblWelcome
             // 
-            this.welcomeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.welcomeLabel.Font = new System.Drawing.Font("Modern No. 20", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.Location = new System.Drawing.Point(235, 67);
-            this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(384, 96);
-            this.welcomeLabel.TabIndex = 0;
-            this.welcomeLabel.Text = "Welcome!";
-            this.welcomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Font = new System.Drawing.Font("Modern No. 20", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(235, 67);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(384, 96);
+            this.lblWelcome.TabIndex = 0;
+            this.lblWelcome.Text = "Welcome!";
+            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLogin
             // 
@@ -78,7 +78,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.welcomeLabel);
+            this.Controls.Add(this.lblWelcome);
             this.Name = "HomeView";
             this.Text = "Home";
             this.ResumeLayout(false);
@@ -87,7 +87,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label welcomeLabel;
+        private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnRegister;
     }
