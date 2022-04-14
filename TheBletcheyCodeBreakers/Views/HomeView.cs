@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TheBletcheyCodeBreakers
+namespace TheBletcheyCodeBreakers.Views
 {
-    public partial class Form1 : Form
+    public partial class HomeView : Form
     {
-        public Form1()
+        public HomeView()
         {
             InitializeComponent();
         }
