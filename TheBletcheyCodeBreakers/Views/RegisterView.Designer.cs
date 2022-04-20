@@ -33,6 +33,8 @@ namespace TheBletcheyCodeBreakers.Views
             this.txtRegisterUsername = new System.Windows.Forms.TextBox();
             this.txtRegisterEmail = new System.Windows.Forms.TextBox();
             this.txtRegisterPassword = new System.Windows.Forms.TextBox();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnRegisterToHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblRegister
@@ -80,6 +82,28 @@ namespace TheBletcheyCodeBreakers.Views
             this.txtRegisterPassword.TabIndex = 6;
             this.txtRegisterPassword.Text = "Password";
             // 
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnRegister.Location = new System.Drawing.Point(611, 459);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(88, 43);
+            this.btnRegister.TabIndex = 7;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            // 
+            // btnRegisterToHome
+            // 
+            this.btnRegisterToHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterToHome.Location = new System.Drawing.Point(12, 568);
+            this.btnRegisterToHome.Name = "btnRegisterToHome";
+            this.btnRegisterToHome.Size = new System.Drawing.Size(143, 61);
+            this.btnRegisterToHome.TabIndex = 8;
+            this.btnRegisterToHome.Text = "Back";
+            this.btnRegisterToHome.UseVisualStyleBackColor = true;
+            // 
             // RegisterView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -88,6 +112,8 @@ namespace TheBletcheyCodeBreakers.Views
             this.BackgroundImage = global::TheBletcheyCodeBreakers.Properties.Resources.homeBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1143, 641);
+            this.Controls.Add(this.btnRegisterToHome);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtRegisterPassword);
             this.Controls.Add(this.txtRegisterEmail);
             this.Controls.Add(this.txtRegisterUsername);
@@ -105,5 +131,7 @@ namespace TheBletcheyCodeBreakers.Views
         private System.Windows.Forms.TextBox txtRegisterUsername;
         private System.Windows.Forms.TextBox txtRegisterEmail;
         private System.Windows.Forms.TextBox txtRegisterPassword;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnRegisterToHome;
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnWelcomeLogin = new System.Windows.Forms.Button();
+            this.btnWelcomeRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -44,29 +44,29 @@
             this.lblWelcome.Text = "Welcome!";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnLogin
+            // btnWelcomeLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(411, 341);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(159, 86);
-            this.btnLogin.TabIndex = 1;
-            this.btnLogin.Text = "Log In";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnWelcomeLogin.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnWelcomeLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnWelcomeLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWelcomeLogin.Location = new System.Drawing.Point(411, 341);
+            this.btnWelcomeLogin.Name = "btnWelcomeLogin";
+            this.btnWelcomeLogin.Size = new System.Drawing.Size(159, 86);
+            this.btnWelcomeLogin.TabIndex = 1;
+            this.btnWelcomeLogin.Text = "Log In";
+            this.btnWelcomeLogin.UseVisualStyleBackColor = false;
             // 
-            // btnRegister
+            // btnWelcomeRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(622, 341);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(159, 86);
-            this.btnRegister.TabIndex = 2;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnWelcomeRegister.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnWelcomeRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnWelcomeRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWelcomeRegister.Location = new System.Drawing.Point(622, 341);
+            this.btnWelcomeRegister.Name = "btnWelcomeRegister";
+            this.btnWelcomeRegister.Size = new System.Drawing.Size(159, 86);
+            this.btnWelcomeRegister.TabIndex = 2;
+            this.btnWelcomeRegister.Text = "Register";
+            this.btnWelcomeRegister.UseVisualStyleBackColor = false;
             // 
             // HomeView
             // 
@@ -76,8 +76,8 @@
             this.BackgroundImage = global::TheBletcheyCodeBreakers.Properties.Resources.homeBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1141, 641);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnWelcomeRegister);
+            this.Controls.Add(this.btnWelcomeLogin);
             this.Controls.Add(this.lblWelcome);
             this.Name = "HomeView";
             this.Text = "Home";
@@ -88,7 +88,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblWelcome;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnWelcomeLogin;
+        private System.Windows.Forms.Button btnWelcomeRegister;
     }
 }

@@ -32,6 +32,8 @@ namespace TheBletcheyCodeBreakers.Views
             this.txtPass = new System.Windows.Forms.TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnLoginToHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPass
@@ -68,6 +70,28 @@ namespace TheBletcheyCodeBreakers.Views
             this.txtUsername.TabIndex = 3;
             this.txtUsername.Text = "Username";
             // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLogin.Location = new System.Drawing.Point(610, 411);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(88, 43);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            // 
+            // btnLoginToHome
+            // 
+            this.btnLoginToHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoginToHome.Location = new System.Drawing.Point(12, 567);
+            this.btnLoginToHome.Name = "btnLoginToHome";
+            this.btnLoginToHome.Size = new System.Drawing.Size(143, 61);
+            this.btnLoginToHome.TabIndex = 9;
+            this.btnLoginToHome.Text = "Back";
+            this.btnLoginToHome.UseVisualStyleBackColor = true;
+            // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -76,6 +100,8 @@ namespace TheBletcheyCodeBreakers.Views
             this.BackgroundImage = global::TheBletcheyCodeBreakers.Properties.Resources.homeBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1144, 640);
+            this.Controls.Add(this.btnLoginToHome);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.txtPass);
@@ -90,5 +116,7 @@ namespace TheBletcheyCodeBreakers.Views
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnLoginToHome;
     }
 }
