@@ -30,7 +30,7 @@ namespace TheBletcheyCodeBreakers.Views
         private void InitializeComponent()
         {
             this.txtPass = new System.Windows.Forms.TextBox();
-            this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -45,17 +45,17 @@ namespace TheBletcheyCodeBreakers.Views
             this.txtPass.TabIndex = 1;
             this.txtPass.Text = "Password";
             // 
-            // lblWelcome
+            // lblLogin
             // 
-            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
-            this.lblWelcome.Font = new System.Drawing.Font("Modern No. 20", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblWelcome.Location = new System.Drawing.Point(385, 141);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(384, 96);
-            this.lblWelcome.TabIndex = 2;
-            this.lblWelcome.Text = "Login";
-            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogin.Font = new System.Drawing.Font("Modern No. 20", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblLogin.Location = new System.Drawing.Point(385, 141);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(384, 96);
+            this.lblLogin.TabIndex = 2;
+            this.lblLogin.Text = "Login";
+            this.lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtUsername
             // 
@@ -77,7 +77,7 @@ namespace TheBletcheyCodeBreakers.Views
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1144, 640);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.lblWelcome);
+            this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.txtPass);
             this.Name = "LoginView";
             this.Text = "LoginView";
@@ -88,7 +88,7 @@ namespace TheBletcheyCodeBreakers.Views
 
         #endregion
         private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.TextBox txtUsername;
     }
 }
