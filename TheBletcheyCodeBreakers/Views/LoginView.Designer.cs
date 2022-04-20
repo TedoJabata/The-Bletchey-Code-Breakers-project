@@ -81,6 +81,7 @@ namespace TheBletcheyCodeBreakers.Views
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnLoginToHome
             // 
@@ -91,6 +92,7 @@ namespace TheBletcheyCodeBreakers.Views
             this.btnLoginToHome.TabIndex = 9;
             this.btnLoginToHome.Text = "Back";
             this.btnLoginToHome.UseVisualStyleBackColor = true;
+            this.btnLoginToHome.Click += new System.EventHandler(this.btnLoginToHome_Click);
             // 
             // LoginView
             // 
