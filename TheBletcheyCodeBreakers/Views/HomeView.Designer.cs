@@ -55,6 +55,7 @@
             this.btnWelcomeLogin.TabIndex = 1;
             this.btnWelcomeLogin.Text = "Log In";
             this.btnWelcomeLogin.UseVisualStyleBackColor = false;
+            this.btnWelcomeLogin.Click += new System.EventHandler(this.btnWelcomeLogin_Click);
             // 
             // btnWelcomeRegister
             // 
@@ -67,6 +68,7 @@
             this.btnWelcomeRegister.TabIndex = 2;
             this.btnWelcomeRegister.Text = "Register";
             this.btnWelcomeRegister.UseVisualStyleBackColor = false;
+            this.btnWelcomeRegister.Click += new System.EventHandler(this.btnWelcomeRegister_Click);
             // 
             // HomeView
             // 

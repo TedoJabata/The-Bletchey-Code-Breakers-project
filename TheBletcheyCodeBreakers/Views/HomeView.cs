@@ -16,5 +16,19 @@ namespace TheBletcheyCodeBreakers.Views
         {
             InitializeComponent();
         }
+
+        private void btnWelcomeLogin_Click(object sender, EventArgs e)
+        {
+            LoginView login = new LoginView();
+            login.Show();
+            this.Hide();
+        }
+
+        private void btnWelcomeRegister_Click(object sender, EventArgs e)
+        {
+            RegisterView register = new RegisterView();
+            register.Show();
+            this.Hide();
+        }
     }
 }

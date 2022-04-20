@@ -93,6 +93,7 @@ namespace TheBletcheyCodeBreakers.Views
             this.btnRegister.TabIndex = 7;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnRegisterToHome
             // 
@@ -103,6 +104,7 @@ namespace TheBletcheyCodeBreakers.Views
             this.btnRegisterToHome.TabIndex = 8;
             this.btnRegisterToHome.Text = "Back";
             this.btnRegisterToHome.UseVisualStyleBackColor = true;
+            this.btnRegisterToHome.Click += new System.EventHandler(this.btnRegisterToHome_Click);
             // 
             // RegisterView
             // 
