@@ -12,6 +12,8 @@ namespace TheBletcheyCodeBreakers.Views
 {
     public partial class LoginView : Form
     {
+        GameController gameController = new GameController();
+
         public LoginView()
         {
             InitializeComponent();
@@ -26,6 +28,14 @@ namespace TheBletcheyCodeBreakers.Views
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            string username = txtUsername.Text;
+            string password = txtPass.Text;
+            gameController.LogIn(username, password);
+
+
+
+
+
             MainGameView game = new MainGameView();
             game.Show();
             this.Hide();
