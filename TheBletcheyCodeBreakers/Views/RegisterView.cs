@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheBletcheyCodeBreakers.Controllers;
+using TheBletcheyCodeBreakers.Model;
 
 namespace TheBletcheyCodeBreakers.Views
 {
     public partial class RegisterView : Form
     {
+        RegisterController registerController = new RegisterController();
+
         public RegisterView()
         {
             InitializeComponent();
