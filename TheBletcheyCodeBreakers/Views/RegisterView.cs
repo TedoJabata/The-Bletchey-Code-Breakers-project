@@ -60,7 +60,7 @@ namespace TheBletcheyCodeBreakers.Views
             {
                 Account acc = new Account();
 
-                acc.Usernane = txtRegisterUsername.Text;
+                acc.Username = txtRegisterUsername.Text;
                 acc.Password = txtRegisterPassword.Text;
                 acc.Email = txtRegisterEmail.Text;
 
