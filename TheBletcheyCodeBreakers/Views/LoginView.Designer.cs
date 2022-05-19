@@ -47,7 +47,6 @@ namespace TheBletcheyCodeBreakers.Views
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(252, 35);
             this.txtPass.TabIndex = 1;
-            this.txtPass.Text = "Password";
             // 
             // lblLogin
             // 
@@ -70,7 +69,6 @@ namespace TheBletcheyCodeBreakers.Views
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(252, 35);
             this.txtUsername.TabIndex = 3;
-            this.txtUsername.Text = "Username";
             // 
             // btnLogin
             // 
