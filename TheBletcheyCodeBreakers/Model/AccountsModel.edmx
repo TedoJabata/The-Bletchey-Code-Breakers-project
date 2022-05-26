@@ -21,6 +21,16 @@
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="History">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Num 1" Type="nchar" MaxLength="10" />
+          <Property Name="Num 2" Type="nchar" MaxLength="10" />
+          <Property Name="Num 3" Type="nchar" MaxLength="10" />
+          <Property Name="Num 4" Type="nchar" MaxLength="10" />
+        </EntityType>
         <Association Name="FK__Games__UserId__6FE99F9F">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Games" Type="Self.Games" Multiplicity="*" />
@@ -36,6 +46,7 @@
         <EntityContainer Name="AccountsDBModelStoreContainer">
           <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Games" EntityType="Self.Games" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="History" EntityType="Self.History" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Games__UserId__6FE99F9F" Association="Self.FK__Games__UserId__6FE99F9F">
             <End Role="Account" EntitySet="Account" />
             <End Role="Games" EntitySet="Games" />
@@ -62,6 +73,7 @@
             <End Role="Account" EntitySet="Accounts" />
             <End Role="Game" EntitySet="Games" />
           </AssociationSet>
+          <EntitySet Name="Histories" EntityType="AccountsDBModel.History" />
         </EntityContainer>
         <EntityType Name="Game">
           <Key>
@@ -83,6 +95,16 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="History">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Num_1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Num_2" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Num_3" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Num_4" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -103,6 +125,17 @@
             <EntityTypeMapping TypeName="AccountsDBModel.Game">
               <MappingFragment StoreEntitySet="Games">
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Histories">
+            <EntityTypeMapping TypeName="AccountsDBModel.History">
+              <MappingFragment StoreEntitySet="History">
+                <ScalarProperty Name="Num_4" ColumnName="Num 4" />
+                <ScalarProperty Name="Num_3" ColumnName="Num 3" />
+                <ScalarProperty Name="Num_2" ColumnName="Num 2" />
+                <ScalarProperty Name="Num_1" ColumnName="Num 1" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

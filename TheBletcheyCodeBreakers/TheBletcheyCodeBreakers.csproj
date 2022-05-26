@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\MainGameController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Model\Account.cs">
       <DependentUpon>AccountsModel.tt</DependentUpon>
@@ -90,6 +91,9 @@
       <DependentUpon>AccountsModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\Game.cs">
+      <DependentUpon>AccountsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\History.cs">
       <DependentUpon>AccountsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -148,6 +152,7 @@
       <DependentUpon>AccountsModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\TheBletcheyCodeBreakers.Model.History.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -27,5 +27,6 @@ namespace TheBletcheyCodeBreakers.Model
     
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Game> Games { get; set; }
+        public virtual DbSet<History> Histories { get; set; }
     }
 }
