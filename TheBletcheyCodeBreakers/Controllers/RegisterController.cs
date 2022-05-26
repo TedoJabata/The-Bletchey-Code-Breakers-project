@@ -19,6 +19,7 @@ namespace TheBletcheyCodeBreakers.Controllers
                     lastUserId = new Account();
                     lastUserId.Id = 0;
                 }
+
                 acc.Id = lastUserId.Id + 1;
                 adbe.Accounts.Add(acc);
                 adbe.SaveChanges();
