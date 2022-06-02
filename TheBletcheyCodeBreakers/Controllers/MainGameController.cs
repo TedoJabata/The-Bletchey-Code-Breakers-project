@@ -9,10 +9,13 @@ namespace TheBletcheyCodeBreakers.Controllers
 {
     internal class MainGameController
     {
+
+        string[] usedNums = { "", "", "", "" };
+        int currBulls;
+        int currCows;
         public string[] GenerateNewNums()
         {
             int[] nums = { 1, 2, 3, 4, 5, 6, 7, 0 };
-            string[] usedNums = { "", "", "", "" };
 
             for (int i = 1; i <= 4; i++)
             {
@@ -27,29 +30,49 @@ namespace TheBletcheyCodeBreakers.Controllers
             return usedNums;
         }
 
-        public void HistoryCreate(History history)
+        public string[] UpdateLabels(string num1, string num2, string num3, string num4)
         {
-            using (AccountsDBEntities adbe = new AccountsDBEntities())
-            {
-                var lastNumsId = adbe.Histories.ToList().LastOrDefault();
-                if (lastNumsId == null)
-                {
-                    lastNumsId = new History();
-                    lastNumsId.Id = 0;
-                }
+            currBulls = 0;
+            currCows = 0;
 
-                history.Id = lastNumsId.Id + 1;
-                adbe.Histories.Add(history);
-                adbe.SaveChanges();
-            }
-        }
-
-        public List<History> GetAll()
-        {
-            using (AccountsDBEntities adbe = new AccountsDBEntities())
+            if (num1 == usedNums[0])
             {
-                return adbe.Histories.ToList();
+                currBulls++;
             }
+            else if (num1 == usedNums[1] || num1 == usedNums[2] || num1 == usedNums[3])
+            {
+                currCows++;
+            }
+
+            if (num2 == usedNums[1])
+            {
+                currBulls++;
+            }
+            else if (num2 == usedNums[0] || num2 == usedNums[2] || num2 == usedNums[3])
+            {
+                currCows++;
+            }
+
+            if (num3 == usedNums[2])
+            {
+                currBulls++;
+            }
+            else if (num3 == usedNums[0] || num3 == usedNums[1] || num3 == usedNums[3])
+            {
+                currCows++;
+            }
+
+            if (num4 == usedNums[3])
+            {
+                currBulls++;
+            }
+            else if (num4 == usedNums[0] || num4 == usedNums[1] || num4 == usedNums[2])
+            {
+                currCows++;
+            }
+
+            string[] bullsAndCows = { currBulls.ToString(), currCows.ToString() };
+            return bullsAndCows;
         }
     }
 }

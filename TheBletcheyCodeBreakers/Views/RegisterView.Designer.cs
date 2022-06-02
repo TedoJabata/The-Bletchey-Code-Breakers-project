@@ -79,6 +79,7 @@ namespace TheBletcheyCodeBreakers.Views
             this.txtRegisterPassword.Location = new System.Drawing.Point(450, 461);
             this.txtRegisterPassword.Multiline = true;
             this.txtRegisterPassword.Name = "txtRegisterPassword";
+            this.txtRegisterPassword.PasswordChar = '⚫';
             this.txtRegisterPassword.Size = new System.Drawing.Size(252, 35);
             this.txtRegisterPassword.TabIndex = 6;
             // 

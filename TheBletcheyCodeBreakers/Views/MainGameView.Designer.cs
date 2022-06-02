@@ -29,23 +29,19 @@ namespace TheBletcheyCodeBreakers.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPlay = new System.Windows.Forms.Button();
             this.num1 = new System.Windows.Forms.TextBox();
             this.num2 = new System.Windows.Forms.TextBox();
             this.num3 = new System.Windows.Forms.TextBox();
             this.num4 = new System.Windows.Forms.TextBox();
-            this.historyTable = new System.Windows.Forms.DataGridView();
             this.btnTry = new System.Windows.Forms.Button();
-            this.num1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.num2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.num3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.num4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.historyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblBulls = new System.Windows.Forms.Label();
+            this.lblCows = new System.Windows.Forms.Label();
+            this.lblWin = new System.Windows.Forms.Label();
+            this.historyTable = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historyTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -113,25 +109,6 @@ namespace TheBletcheyCodeBreakers.Views
             this.num4.TabIndex = 5;
             this.num4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // historyTable
-            // 
-            this.historyTable.AllowUserToAddRows = false;
-            this.historyTable.AllowUserToDeleteRows = false;
-            this.historyTable.AutoGenerateColumns = false;
-            this.historyTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.historyTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.historyTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.num1DataGridViewTextBoxColumn,
-            this.num2DataGridViewTextBoxColumn,
-            this.num3DataGridViewTextBoxColumn,
-            this.num4DataGridViewTextBoxColumn});
-            this.historyTable.DataSource = this.historyBindingSource;
-            this.historyTable.Location = new System.Drawing.Point(344, 330);
-            this.historyTable.Name = "historyTable";
-            this.historyTable.ReadOnly = true;
-            this.historyTable.Size = new System.Drawing.Size(444, 186);
-            this.historyTable.TabIndex = 6;
-            // 
             // btnTry
             // 
             this.btnTry.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -143,37 +120,49 @@ namespace TheBletcheyCodeBreakers.Views
             this.btnTry.UseVisualStyleBackColor = true;
             this.btnTry.Click += new System.EventHandler(this.btnTry_Click);
             // 
-            // num1DataGridViewTextBoxColumn
+            // lblBulls
             // 
-            this.num1DataGridViewTextBoxColumn.DataPropertyName = "Num_1";
-            this.num1DataGridViewTextBoxColumn.HeaderText = "Num_1";
-            this.num1DataGridViewTextBoxColumn.Name = "num1DataGridViewTextBoxColumn";
-            this.num1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.lblBulls.BackColor = System.Drawing.SystemColors.Control;
+            this.lblBulls.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBulls.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblBulls.Image = global::TheBletcheyCodeBreakers.Properties.Resources.gameBackground;
+            this.lblBulls.Location = new System.Drawing.Point(79, 168);
+            this.lblBulls.Name = "lblBulls";
+            this.lblBulls.Size = new System.Drawing.Size(224, 66);
+            this.lblBulls.TabIndex = 8;
+            this.lblBulls.Text = "Bulls:";
             // 
-            // num2DataGridViewTextBoxColumn
+            // lblCows
             // 
-            this.num2DataGridViewTextBoxColumn.DataPropertyName = "Num_2";
-            this.num2DataGridViewTextBoxColumn.HeaderText = "Num_2";
-            this.num2DataGridViewTextBoxColumn.Name = "num2DataGridViewTextBoxColumn";
-            this.num2DataGridViewTextBoxColumn.ReadOnly = true;
+            this.lblCows.BackColor = System.Drawing.SystemColors.Control;
+            this.lblCows.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCows.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCows.Image = global::TheBletcheyCodeBreakers.Properties.Resources.gameBackground;
+            this.lblCows.Location = new System.Drawing.Point(79, 255);
+            this.lblCows.Name = "lblCows";
+            this.lblCows.Size = new System.Drawing.Size(224, 66);
+            this.lblCows.TabIndex = 9;
+            this.lblCows.Text = "Cows:";
             // 
-            // num3DataGridViewTextBoxColumn
+            // lblWin
             // 
-            this.num3DataGridViewTextBoxColumn.DataPropertyName = "Num_3";
-            this.num3DataGridViewTextBoxColumn.HeaderText = "Num_3";
-            this.num3DataGridViewTextBoxColumn.Name = "num3DataGridViewTextBoxColumn";
-            this.num3DataGridViewTextBoxColumn.ReadOnly = true;
+            this.lblWin.BackColor = System.Drawing.SystemColors.Control;
+            this.lblWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWin.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblWin.Image = global::TheBletcheyCodeBreakers.Properties.Resources.gameBackground;
+            this.lblWin.Location = new System.Drawing.Point(79, 428);
+            this.lblWin.Name = "lblWin";
+            this.lblWin.Size = new System.Drawing.Size(246, 70);
+            this.lblWin.TabIndex = 10;
+            this.lblWin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // num4DataGridViewTextBoxColumn
+            // historyTable
             // 
-            this.num4DataGridViewTextBoxColumn.DataPropertyName = "Num_4";
-            this.num4DataGridViewTextBoxColumn.HeaderText = "Num_4";
-            this.num4DataGridViewTextBoxColumn.Name = "num4DataGridViewTextBoxColumn";
-            this.num4DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // historyBindingSource
-            // 
-            this.historyBindingSource.DataSource = typeof(TheBletcheyCodeBreakers.Model.History);
+            this.historyTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.historyTable.Location = new System.Drawing.Point(344, 284);
+            this.historyTable.Name = "historyTable";
+            this.historyTable.Size = new System.Drawing.Size(444, 262);
+            this.historyTable.TabIndex = 11;
             // 
             // MainGameView
             // 
@@ -182,8 +171,11 @@ namespace TheBletcheyCodeBreakers.Views
             this.BackgroundImage = global::TheBletcheyCodeBreakers.Properties.Resources.homeBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1143, 644);
-            this.Controls.Add(this.btnTry);
             this.Controls.Add(this.historyTable);
+            this.Controls.Add(this.lblWin);
+            this.Controls.Add(this.lblCows);
+            this.Controls.Add(this.lblBulls);
+            this.Controls.Add(this.btnTry);
             this.Controls.Add(this.num4);
             this.Controls.Add(this.num3);
             this.Controls.Add(this.num2);
@@ -192,10 +184,8 @@ namespace TheBletcheyCodeBreakers.Views
             this.Controls.Add(this.pictureBox1);
             this.Name = "MainGameView";
             this.Text = "MainGameView";
-            this.Load += new System.EventHandler(this.MainGameView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historyTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historyBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,12 +199,14 @@ namespace TheBletcheyCodeBreakers.Views
         private System.Windows.Forms.TextBox num2;
         private System.Windows.Forms.TextBox num3;
         private System.Windows.Forms.TextBox num4;
-        private System.Windows.Forms.DataGridView historyTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn num1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn num2DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn num3DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn num4DataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource historyBindingSource;
         private System.Windows.Forms.Button btnTry;
+        private System.Windows.Forms.Label lblBulls;
+        private System.Windows.Forms.Label lblCows;
+        private System.Windows.Forms.Label lblWin;
+        private System.Windows.Forms.DataGridView historyTable;
     }
 }
