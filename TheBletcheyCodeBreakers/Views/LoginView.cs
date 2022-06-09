@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheBletcheyCodeBreakers.Controllers;
+using TheBletcheyCodeBreakers.Model;
 
 namespace TheBletcheyCodeBreakers.Views
 {
     public partial class LoginView : Form
     {
+        LoginController loginController = new LoginController();
         public LoginView()
         {
             InitializeComponent();
@@ -26,9 +29,21 @@ namespace TheBletcheyCodeBreakers.Views
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MainGameView game = new MainGameView();
-            game.Show();
-            this.Hide();
+            using (AccountsDBEntities adbe = new AccountsDBEntities())
+            {
+                var message = loginController.ShowMessage(txtUsername.Text, txtPass.Text);
+                if (message != null)
+                {
+                    MessageBox.Show(message);
+                }
+                else
+                {
+                    MainGameView game = new MainGameView();
+                    game.Show();
+                    this.Hide();
+                }
+            }
+            
         }
     }
 }
