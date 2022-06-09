@@ -74,5 +74,9 @@ namespace TheBletcheyCodeBreakers.Controllers
             string[] bullsAndCows = { currBulls.ToString(), currCows.ToString() };
             return bullsAndCows;
         }
+        public void GetLoggedUser()
+        {
+
+        }
     }
 }

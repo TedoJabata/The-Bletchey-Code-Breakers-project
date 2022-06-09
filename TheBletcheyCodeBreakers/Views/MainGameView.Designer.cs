@@ -40,6 +40,8 @@ namespace TheBletcheyCodeBreakers.Views
             this.lblCows = new System.Windows.Forms.Label();
             this.lblWin = new System.Windows.Forms.Label();
             this.historyTable = new System.Windows.Forms.DataGridView();
+            this.lblLoggedUser = new System.Windows.Forms.Label();
+            this.lblWins = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historyTable)).BeginInit();
             this.SuspendLayout();
@@ -164,6 +166,30 @@ namespace TheBletcheyCodeBreakers.Views
             this.historyTable.Size = new System.Drawing.Size(444, 262);
             this.historyTable.TabIndex = 11;
             // 
+            // lblLoggedUser
+            // 
+            this.lblLoggedUser.BackColor = System.Drawing.SystemColors.Control;
+            this.lblLoggedUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoggedUser.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblLoggedUser.Image = global::TheBletcheyCodeBreakers.Properties.Resources.gameBackground;
+            this.lblLoggedUser.Location = new System.Drawing.Point(79, 74);
+            this.lblLoggedUser.Name = "lblLoggedUser";
+            this.lblLoggedUser.Size = new System.Drawing.Size(171, 36);
+            this.lblLoggedUser.TabIndex = 12;
+            this.lblLoggedUser.Text = "Hello";
+            // 
+            // lblWins
+            // 
+            this.lblWins.BackColor = System.Drawing.SystemColors.Control;
+            this.lblWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWins.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblWins.Image = global::TheBletcheyCodeBreakers.Properties.Resources.gameBackground;
+            this.lblWins.Location = new System.Drawing.Point(793, 74);
+            this.lblWins.Name = "lblWins";
+            this.lblWins.Size = new System.Drawing.Size(245, 36);
+            this.lblWins.TabIndex = 13;
+            this.lblWins.Text = "You have wins  ";
+            // 
             // MainGameView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,6 +197,8 @@ namespace TheBletcheyCodeBreakers.Views
             this.BackgroundImage = global::TheBletcheyCodeBreakers.Properties.Resources.homeBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1143, 644);
+            this.Controls.Add(this.lblWins);
+            this.Controls.Add(this.lblLoggedUser);
             this.Controls.Add(this.historyTable);
             this.Controls.Add(this.lblWin);
             this.Controls.Add(this.lblCows);
@@ -184,6 +212,7 @@ namespace TheBletcheyCodeBreakers.Views
             this.Controls.Add(this.pictureBox1);
             this.Name = "MainGameView";
             this.Text = "MainGameView";
+            this.Load += new System.EventHandler(this.MainGameView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historyTable)).EndInit();
             this.ResumeLayout(false);
@@ -208,5 +237,7 @@ namespace TheBletcheyCodeBreakers.Views
         private System.Windows.Forms.Label lblCows;
         private System.Windows.Forms.Label lblWin;
         private System.Windows.Forms.DataGridView historyTable;
+        private System.Windows.Forms.Label lblLoggedUser;
+        private System.Windows.Forms.Label lblWins;
     }
 }

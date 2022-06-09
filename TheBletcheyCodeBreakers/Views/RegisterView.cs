@@ -33,6 +33,8 @@ namespace TheBletcheyCodeBreakers.Views
             string userChar = txtRegisterUsername.Text;
             string passChar = txtRegisterPassword.Text;
 
+            int wonGames = 0;
+
             var userCharCount = userChar.Length;
             var passCharCount = passChar.Length;
 
@@ -73,12 +75,16 @@ namespace TheBletcheyCodeBreakers.Views
                     else
                     {
                         Account acc = new Account();
+                        Game gm = new Game();
 
                         acc.Username = txtRegisterUsername.Text;
                         acc.Password = txtRegisterPassword.Text;
                         acc.Email = txtRegisterEmail.Text;
 
-                        registerController.AccountCreate(acc);
+                        gm.GamesPlayed = 0;
+                        int lastUserId = registerController.AccountCreate(acc);
+                        registerController.AccountGCreate(gm, lastUserId);
+
                         MessageBox.Show("Registered successfully!");
 
                         LoginView login = new LoginView();

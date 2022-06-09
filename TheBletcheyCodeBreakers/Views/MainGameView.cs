@@ -28,6 +28,7 @@ namespace TheBletcheyCodeBreakers.Views
         private void btnPlay_Click(object sender, EventArgs e)
         {
             inGame = true;
+            lblWin.Text = "";
             if (gameWon == true)
             {
                 lblWin.Text = "";
@@ -81,6 +82,15 @@ namespace TheBletcheyCodeBreakers.Views
                     }
                 }
             }
+            else
+            {
+                lblWin.Text = "Start the game dude"; ;
+            }
+        }
+
+        private void MainGameView_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
