@@ -8,6 +8,7 @@
         <EntityTypeShape EntityType="AccountsDBModel.Account" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AccountsDBModel.Game" Width="1.5" PointX="3" PointY="1" />
         <AssociationConnector Association="AccountsDBModel.FK__Games__UserId__6FE99F9F" />
+        <EntityTypeShape EntityType="AccountsDBModel.History" Width="1.5" PointX="0.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

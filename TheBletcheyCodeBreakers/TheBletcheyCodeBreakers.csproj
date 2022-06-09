@@ -72,7 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MainGameController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Model\Account.cs">
       <DependentUpon>AccountsModel.tt</DependentUpon>
@@ -93,8 +93,24 @@
       <DependentUpon>AccountsModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\Game.cs">
-      <DependentUpon>AccountsModel.tt</DependentUpon>
+      <DependentUpon>GamesModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\GamesModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GamesModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GamesModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GamesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GamesModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GamesModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HistoryModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\HomeView.cs">
@@ -150,7 +166,16 @@
     <None Include="Model\AccountsModel.edmx.diagram">
       <DependentUpon>AccountsModel.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="Model\GamesModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GamesModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\GamesModel.edmx.diagram">
+      <DependentUpon>GamesModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\TheBletcheyCodeBreakers.Model.History.datasource" />
+    <None Include="Properties\DataSources\TheBletcheyCodeBreakers.Model.HistoryModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -200,6 +225,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AccountsModel.edmx</DependentUpon>
       <LastGenOutput>AccountsModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\GamesModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GamesModel.edmx</DependentUpon>
+      <LastGenOutput>GamesModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\GamesModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GamesModel.edmx</DependentUpon>
+      <LastGenOutput>GamesModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

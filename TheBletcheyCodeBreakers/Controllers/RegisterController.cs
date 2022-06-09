@@ -9,18 +9,42 @@ namespace TheBletcheyCodeBreakers.Controllers
 {
     internal class RegisterController
     {
-        public void AccountCreate(Account acc)
+        public int AccountCreate(Account acc)
         {
+            var lastUserId = 0;
             using (AccountsDBEntities adbe = new AccountsDBEntities())
             {
-                var lastUserId = adbe.Accounts.ToList().LastOrDefault();
-                if (lastUserId == null)
+                lastUserId = adbe.Accounts.ToList().LastOrDefault().Id;
+                var lastUser = adbe.Accounts.ToList().LastOrDefault();
+
+                if (lastUser == null)
                 {
-                    lastUserId = new Account();
-                    lastUserId.Id = 0;
+                    lastUser = new Account();
+                    lastUser.Id = 0;
                 }
-                acc.Id = lastUserId.Id + 1;
+
+                acc.Id = lastUser.Id + 1;
                 adbe.Accounts.Add(acc);
+                adbe.SaveChanges();
+
+                return lastUserId;
+            }
+        }
+
+        public void AccountGCreate(Game gm, int lastUserId)
+        {
+            using (AccountsDBEntitiesGames adbe = new AccountsDBEntitiesGames())
+            {
+                var lastGameId = adbe.Games.ToList().LastOrDefault();
+                if (lastGameId == null)
+                {
+                    lastGameId = new Game();
+                    lastGameId.Id = 0;
+                }
+
+                gm.UserId = lastUserId;
+                lastGameId.Id = lastGameId.Id + 1;
+                adbe.Games.Add(gm);
                 adbe.SaveChanges();
             }
         }
