@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheBletcheyCodeBreakers.Controllers;
+using TheBletcheyCodeBreakers.Model;
 
 namespace TheBletcheyCodeBreakers.Views
 {
@@ -28,17 +29,21 @@ namespace TheBletcheyCodeBreakers.Views
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var message = loginController.ShowMessage(txtUsername.Text, txtPass.Text);
-            if (message != null)
+            using (AccountsDBEntities adbe = new AccountsDBEntities())
             {
-                MessageBox.Show(message);
+                var message = loginController.ShowMessage(txtUsername.Text, txtPass.Text);
+                if (message != null)
+                {
+                    MessageBox.Show(message);
+                }
+                else
+                {
+                    MainGameView game = new MainGameView();
+                    game.Show();
+                    this.Hide();
+                }
             }
-            else
-            {
-                MainGameView game = new MainGameView();
-                game.Show();
-                this.Hide();
-            }
+            
         }
     }
 }

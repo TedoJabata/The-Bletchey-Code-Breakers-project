@@ -11,7 +11,7 @@ namespace TheBletcheyCodeBreakers.Controllers
     {
         public void AccountCreate(Account acc)
         {
-            using (AccountsDBEntities  adbe= new AccountsDBEntities())
+            using (AccountsDBEntities adbe = new AccountsDBEntities())
             {
                 var lastUserId = adbe.Accounts.ToList().LastOrDefault();
                 if (lastUserId == null)
