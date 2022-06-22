@@ -97,7 +97,6 @@ namespace TheBletcheyCodeBreakers.Views
         private void MainGameView_Load(object sender, EventArgs e)
         {
             lblLoggedUser.Text = $"Hello {username}";
-            lblWin.Text = "You haven't played any games yet";
         }
     }
 }

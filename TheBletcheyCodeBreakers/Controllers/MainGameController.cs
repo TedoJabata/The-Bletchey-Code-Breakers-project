@@ -97,7 +97,9 @@ namespace TheBletcheyCodeBreakers.Controllers
                         adbe.SaveChanges();
                     }
 
-                    return $"You have played {userGames.GamesPlayed.ToString()}";
+                    string games = userGames.GamesPlayed.ToString();
+
+                    return $"You have played {games} games";
                 }
                 else
                 {

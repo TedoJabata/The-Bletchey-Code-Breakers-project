@@ -184,11 +184,10 @@ namespace TheBletcheyCodeBreakers.Views
             this.lblWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWins.ForeColor = System.Drawing.SystemColors.Control;
             this.lblWins.Image = global::TheBletcheyCodeBreakers.Properties.Resources.gameBackground;
-            this.lblWins.Location = new System.Drawing.Point(795, 74);
+            this.lblWins.Location = new System.Drawing.Point(590, 74);
             this.lblWins.Name = "lblWins";
-            this.lblWins.Size = new System.Drawing.Size(243, 36);
+            this.lblWins.Size = new System.Drawing.Size(448, 36);
             this.lblWins.TabIndex = 13;
-            this.lblWins.Text = "You have 0 wins  ";
             // 
             // MainGameView
             // 
