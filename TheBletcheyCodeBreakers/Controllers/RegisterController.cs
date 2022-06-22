@@ -30,23 +30,5 @@ namespace TheBletcheyCodeBreakers.Controllers
                 return lastUserId;
             }
         }
-
-        public void AccountGCreate(Game gm, int lastUserId)
-        {
-            using (AccountsDBEntitiesGames adbe = new AccountsDBEntitiesGames())
-            {
-                var lastGameId = adbe.Games.ToList().LastOrDefault();
-                if (lastGameId == null)
-                {
-                    lastGameId = new Game();
-                    lastGameId.Id = 0;
-                }
-
-                gm.UserId = lastUserId;
-                lastGameId.Id = lastGameId.Id + 1;
-                adbe.Games.Add(gm);
-                adbe.SaveChanges();
-            }
-        }
     }
 }
