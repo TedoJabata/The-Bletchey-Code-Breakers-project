@@ -17,11 +17,16 @@ namespace TheBletcheyCodeBreakers.Views
         List<HistoryModel> list = new List<HistoryModel>();
         MainGameController controller = new MainGameController();
 
+        string username = "";
+
+        public static int playedGames = 0;
+
         bool inGame = false;
         bool gameWon = false;
 
-        public MainGameView()
+        public MainGameView(string user)
         {
+            username = user;
             InitializeComponent();
         }
 
@@ -38,6 +43,7 @@ namespace TheBletcheyCodeBreakers.Views
             string[] nums = controller.GenerateNewNums();
             historyTable.DataSource = null;
             list.Clear();
+            lblWins.Text = controller.PlayedGames();
         }
 
         private void btnTry_Click(object sender, EventArgs e)
@@ -90,7 +96,8 @@ namespace TheBletcheyCodeBreakers.Views
 
         private void MainGameView_Load(object sender, EventArgs e)
         {
-
+            lblLoggedUser.Text = $"Hello {username}";
+            lblWin.Text = "You haven't played any games yet";
         }
     }
 }

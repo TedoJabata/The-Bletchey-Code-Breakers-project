@@ -83,7 +83,6 @@ namespace TheBletcheyCodeBreakers.Views
 
                         gm.GamesPlayed = 0;
                         int lastUserId = registerController.AccountCreate(acc);
-                        registerController.AccountGCreate(gm, lastUserId);
 
                         MessageBox.Show("Registered successfully!");
 

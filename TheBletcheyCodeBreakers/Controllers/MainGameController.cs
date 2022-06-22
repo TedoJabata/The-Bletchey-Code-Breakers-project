@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TheBletcheyCodeBreakers.Model;
+using TheBletcheyCodeBreakers.Views;
 
 namespace TheBletcheyCodeBreakers.Controllers
 {
@@ -13,6 +14,9 @@ namespace TheBletcheyCodeBreakers.Controllers
         string[] usedNums = { "", "", "", "" };
         int currBulls;
         int currCows;
+
+        bool addGame = false;
+
         public string[] GenerateNewNums()
         {
             int[] nums = { 1, 2, 3, 4, 5, 6, 7, 0 };
@@ -74,9 +78,49 @@ namespace TheBletcheyCodeBreakers.Controllers
             string[] bullsAndCows = { currBulls.ToString(), currCows.ToString() };
             return bullsAndCows;
         }
-        public void GetLoggedUser()
-        {
 
+        public string PlayedGames()
+        {
+            using (AccountsDBEntities adbe = new AccountsDBEntities())
+            {
+                var acc = adbe.Accounts.Where(s => s.Username == LoginView.currLoggedUsername).FirstOrDefault();
+                var id = acc.Id;
+
+                if (adbe.Games.Where(s => s.UserId == id).FirstOrDefault() != null)
+                {
+                    var userGames = adbe.Games.Where(s => s.UserId == id).FirstOrDefault();
+
+                    if (addGame == true)
+                    {
+                        addGame = false;
+                        adbe.Games.Where(s => s == userGames).FirstOrDefault().GamesPlayed++;
+                        adbe.SaveChanges();
+                    }
+
+                    return $"You have played {userGames.GamesPlayed.ToString()}";
+                }
+                else
+                {
+                    Game game = new Game();
+
+                    if (adbe.Games.ToList().LastOrDefault() == null)
+                    {
+                        game.Id = 0;
+                    }
+                    else
+                    {
+                        game.Id = adbe.Games.ToList().LastOrDefault().Id + 1;
+                    }
+
+                    game.UserId = id;
+                    game.GamesPlayed = 0;
+
+                    adbe.Games.Add(game);
+                    adbe.SaveChanges();
+
+                    return "You haven't played any games yet";
+                }
+            }
         }
     }
 }
